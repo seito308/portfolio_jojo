@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --golden-ratio: 1.618;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Thai', sans-serif;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Cinzel Decorative', 'Noto Sans Thai', serif;
+  }
+}
+
+/* JoJo Part 7: Steel Ball Run Custom Styling */
+.manga-border {
+  border: 2px solid currentColor;
+  box-shadow: 6px 6px 0px 0px #D4AF37;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .manga-border {
+  box-shadow: 6px 6px 0px 0px #D81B60;
+}
+
+.manga-border:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px 0px #00BFA5;
+}
+
+.halftone-overlay {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.18) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.dark .halftone-overlay {
+  background-image: radial-gradient(rgba(216, 27, 96, 0.2) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.speed-lines {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 14px,
+    rgba(212, 175, 55, 0.05) 14px,
+    rgba(212, 175, 55, 0.05) 16px
+  );
+}
+
+/* Custom Golden Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0914;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4AF37, #D81B60);
+  border-radius: 2px;
+}
